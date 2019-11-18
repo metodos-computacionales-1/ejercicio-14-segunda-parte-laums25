@@ -21,7 +21,7 @@ void euler(float delta, string nombre){
 	  outfile.open(nombre);
 	  float v=0.0;
 	  float x=1.0;
-	  float k=50.0;
+	  float k=10.5;
 	  double m=2.0;
 	
 
@@ -31,7 +31,7 @@ void euler(float delta, string nombre){
 	     double vn = v;
 	        
 	     x = x + delta *vn;
-	     v = v - (delta * (k/m) * xn);
+	     v = v + (delta * (-k/m) * xn);
 	     outfile<<tini<<" "<<x<<" "<<v<<std::endl;
 	    }
 	    outfile.close();
